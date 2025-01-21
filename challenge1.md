@@ -30,7 +30,6 @@ An S3 bucket has been configured with a public IAM policy, granting unrestricted
 }
 ```
 ### write a short analysis about the IAM policy here
-```
 * What do I have access to?
 --> I have public access to list objects in the files/ directory and download any object stored in the bucket. This means I can freely explore and retrieve files without any authentication.
 
@@ -45,7 +44,7 @@ An S3 bucket has been configured with a public IAM policy, granting unrestricted
 
 * How could this misconfiguration have been avoided?
 --> This misconfiguration could have been avoided by limiting public access and enforcing stricter permissions. For instance, the Principal should not be set to * unless necessary, and access could be restricted using identity-based policies or IP conditions to prevent unauthorized usage.
-```
+
 
 ## Solution
 Step 1: List Bucket Contents
