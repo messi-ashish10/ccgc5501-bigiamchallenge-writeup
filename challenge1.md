@@ -1,5 +1,5 @@
 # Challenge number
-1
+Challenge: 1
 
 ## Challenge Statement
 An S3 bucket has been configured with a public IAM policy, granting unrestricted access to list and download objects within a specific directory, files/. My task is to identify the security risk associated with this bucket by analyzing its access permissions. Additionally, I need to retrieve a flag stored in one of the accessible objects within the files/ directory. Once I have located and retrieved the flag, I will submit it to complete the challenge.
