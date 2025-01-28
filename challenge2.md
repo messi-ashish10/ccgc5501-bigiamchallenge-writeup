@@ -45,17 +45,23 @@ aws sqs receive-message --queue-url https://sqs.us-east-1.amazonaws.com/09229785
 ```
 
 Step 2: Examine the Message: The returned message body contains a URL pointing to an S3 bucket:
+```
 {
     "URL": "https://tbic-wiz-analytics-bucket-b44867f.s3.amazonaws.com/pAXCWLa6ql.html",
     "User-Agent": "Lynx/2.5329.3258dev.35046 libwww-FM/2.14 SSL-MM/1.4.3714",
     "IsAdmin": true
 }
+```
 
 Step 3: Access the URL in the Message: The message body provided a direct URL to an HTML file stored in an S3 bucket. I accessed the URL to view the file.
+```
 https://tbic-wiz-analytics-bucket-b44867f.s3.amazonaws.com/pAXCWLa6ql.html
+```
 
 Step 4: Inspect the HTML File for the Flag: I opened it in a web browser. Inside the HTML content, I found the flag.
+```
 {wiz:you-are-at-the-front-of-the-queue}
+```
 
 Step 5: Submit the Flag: Finally, I submitted the retrieved flag on the challenge platform.
 
