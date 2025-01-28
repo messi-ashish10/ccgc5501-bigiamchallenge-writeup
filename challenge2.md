@@ -40,7 +40,9 @@ In this challenge, I was tasked with interacting with an Amazon SQS queue that h
 
 ## Solution
 Step 1: Retrieve the Message from the SQS Queue: I used the following AWS CLI command to receive the message from the SQS queue. The command retrieves the latest message from the queue, which contains the flag's URL.
+```
 aws sqs receive-message --queue-url https://sqs.us-east-1.amazonaws.com/092297851374/wiz-tbic-analytics-sqs-queue-ca7a1b2 --attribute-names All --message-attribute-names All --no-sign-request
+```
 
 Step 2: Examine the Message: The returned message body contains a URL pointing to an S3 bucket:
 {
