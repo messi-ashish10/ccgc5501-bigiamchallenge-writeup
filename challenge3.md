@@ -27,7 +27,7 @@ In this challenge, I was tasked with subscribing to an SNS topic and confirming 
     ]
 }
 ```
-### write a short analysis about the IAM policy here
+### Short Analysis about Challenge
 **What do I have access to?**
 
 The IAM policy allows public access for subscribing to the SNS topic with the SNS:Subscribe action. The policy specifies that anyone can subscribe, but only endpoints with the domain @tbic.wiz.io are permitted through the condition sns:Endpoint. This means anyone can interact with the topic as long as the provided endpoint meets the specified condition.
